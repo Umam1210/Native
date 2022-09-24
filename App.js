@@ -1,21 +1,19 @@
 import React from "react";
 import {
   Text,
-  Link,
   HStack,
-  Center,
-  Heading,
   Switch,
   useColorMode,
-  NativeBaseProvider,
   extendTheme,
-  VStack,
-  Stack,
-  Box,
-  Image,
-  Button
 } from "native-base";
-import Todo from "./components/Todo";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import AddList from "./pages/AddList";
+import AddCategory from "./pages/AddCategory";
+import ListTodo from "./pages/ListTodo";
+import DetailList from "./pages/DetailList";
+import NavbarFooter from "./components/NavbarFooter";
 
 // Define the config
 const config = {
@@ -27,32 +25,16 @@ const config = {
 export const theme = extendTheme({ config });
 
 export default function App() {
-  return (
-    <NativeBaseProvider>
-      {/* <ToggleDarkMode /> */}
-      <Center
-        _dark={{ bg: "blueGray.900" }}
-        _light={{ bg: "blueGray.50" }}
-        px={4}
-        flex={1}
-      >
-        <VStack space={2} alignItems="center">
-          <Todo />
-            <HStack alignItems="center" mt="5">
-              <Text>Write your activity and finish your activity.</Text>
-            </HStack>
-            <HStack alignItems="center">
-              <Text>Fast, Simple and Easy to Use</Text>
-            </HStack>
-            <Button mt="1/5" variant="danger" bg="error.600" w="80%">
-              <Text bold color="white">Login</Text>
-            </Button>
-            <Button my="1" mx="10" variant="muted" bg="muted.500" w="80%" >
-              <Text bold color="white">Register</Text>
-            </Button>
-        </VStack>
-      </Center>
-    </NativeBaseProvider>
+  return (<>
+   {/* <Home /> */}
+   {/* <Login /> */}
+   {/* <Register /> */}
+   {/* <AddList /> */}
+   {/* <AddCategory /> */}
+   <ListTodo />
+   {/* <DetailList /> */}
+   {/* <NavbarFooter /> */}
+  </>
   );
 }
 
